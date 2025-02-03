@@ -6,7 +6,6 @@ Create and AI app which will scan your furniture and provide the condition state
 ✅ Dataset preprocessing scripts
 ✅ Scraping scripts for second-hand price data
 
-I’ll generate the base code and share it here. Give me a moment. 🚀
 
 Next Steps:
 Train the AI Model:
