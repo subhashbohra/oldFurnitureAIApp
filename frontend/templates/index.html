@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Furniture Analysis Demo</title>
+</head>
+<body>
+    <h1>Furniture Analysis Demo</h1>
+    <form action="/analyze" method="post" enctype="multipart/form-data">
+        <div>
+            <label>Image:</label>
+            <input type="file" name="image" accept="image/*" required>
+        </div>
+        <div>
+            <label>Age (years):</label>
+            <input type="number" step="0.1" name="age" required>
+        </div>
+        <div>
+            <label>Wood Type:</label>
+            <input type="text" name="wood_type" required>
+        </div>
+        <div>
+            <label>Material Type:</label>
+            <input type="text" name="material_type" required>
+        </div>
+        <button type="submit">Analyze</button>
+    </form>
+    {% if result %}
+    <h2>Result</h2>
+    <p>Estimated Price: {{ result.estimated_price }}</p>
+    <p>Wear Score: {{ result.wear_score }}</p>
+    {% endif %}
+</body>
+</html>
