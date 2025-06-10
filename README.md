@@ -35,3 +35,15 @@ Run the prediction API:
 ```bash
 uvicorn backend.predict_price:app --reload
 ```
+
+Run the demo web interface:
+
+```bash
+uvicorn backend.main:app --reload
+```
+
+Then open `http://localhost:8000` in your browser to upload a furniture image and receive the predicted wear score and estimated price.
+
+### Training
+
+The price predictor can be trained using any open furniture dataset from Kaggle. Download the dataset CSV (with columns like age, wear_score, wood_type, material_type and price) to `datasets/price_data.csv` before running the training script.
