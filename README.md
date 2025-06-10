@@ -3,6 +3,7 @@ Create and AI app which will scan your furniture and provide the condition state
 ✅ Frontend (Flutter/React Native)
 ✅ Backend (FastAPI for AI integration)
 ✅ ML Models (YOLOv8 for object detection, CNN for condition assessment, XGBoost for price prediction)
+✅ Price predictor training script (`models/train_price_predictor.py`) and FastAPI endpoint (`backend/predict_price.py`)
 ✅ Dataset preprocessing scripts
 ✅ Scraping scripts for second-hand price data
 
@@ -20,3 +21,17 @@ Improve AI Detection:
 
 Integrate thermal imaging (if feasible) for termite detection.
 Fine-tune XGBoost model for better price prediction.
+
+## Usage
+
+Train the resale price model:
+
+```bash
+python models/train_price_predictor.py
+```
+
+Run the prediction API:
+
+```bash
+uvicorn backend.predict_price:app --reload
+```
